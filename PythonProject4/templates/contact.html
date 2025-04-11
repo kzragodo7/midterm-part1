@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+
+    </header>
+    <section>
+        <form method="POST" action="/contact">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="phone" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <label>Preferred Contact Method:</label><br>
+            <input type="checkbox" name="preferred" value="Email"> Email
+            <input type="checkbox" name="preferred" value="Phone"> Phone
+            <input type="checkbox" name="preferred" value="Both">
+            Both<br><br>
+
+            <input type="checkbox" name="agreement" required> I agree to the
+            terms<br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+
+    </section>
+</body>
+</html>
